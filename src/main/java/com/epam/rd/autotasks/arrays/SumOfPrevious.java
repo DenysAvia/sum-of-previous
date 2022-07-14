@@ -12,8 +12,18 @@ public class SumOfPrevious {
 
     public static boolean[] getSumCheckArray(int[] array){
 
+        boolean[] resArr = new boolean[array.length];
+
+        resArr[0] = false;
+        resArr[1] = false;
+        for(int i=2; i< array.length; i++) {
+            if (array[i]==(array[i-2]+array[i-1])) resArr[i] = true;
+            else {resArr[i] = false;}
+        }
+        return resArr;
+
         //put your code here
 
-        throw new UnsupportedOperationException();
+      //  throw new UnsupportedOperationException();
     }
 }
